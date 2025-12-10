@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Steel Report Dashboard - 09 Dec 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        
+        .metric-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+        
+        .metric-card h3 {
+            color: #667eea;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .metric-card .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #1e3c72;
+        }
+        
+        .charts-section {
+            padding: 40px;
+        }
+        
+        .chart-container {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .chart-container h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .chart-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏭 Daily Steel Report Dashboard</h1>
+            <p>Date: 09 December 2025</p>
+        </div>
+        
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <h3>Total Production</h3>
+                <div class="value">77.7 MT</div>
+            </div>
+            <div class="metric-card">
+                <h3>Total Dispatch</h3>
+                <div class="value">35 MT</div>
+            </div>
+            <div class="metric-card">
+                <h3>Inventory Added</h3>
+                <div class="value">42.7 MT</div>
+            </div>
+            <div class="metric-card">
+                <h3>New Orders</h3>
+                <div class="value">90 MT</div>
+            </div>
+            <div class="metric-card">
+                <h3>Payments Received</h3>
+                <div class="value">₹22.25L</div>
+            </div>
+            <div class="metric-card">
+                <h3>LC Received</h3>
+                <div class="value">₹25L</div>
+            </div>
+            <div class="metric-card">
+                <h3>Payments Made</h3>
+                <div class="value">₹15L</div>
+            </div>
+            <div class="metric-card">
+                <h3>Avg Lead Time</h3>
+                <div class="value">6.5 hrs</div>
+            </div>
+        </div>
+        
+        <div class="charts-section">
+            <div class="chart-container">
+                <h2>📊 Production Overview</h2>
+                <img src="https://external-agents.nyc3.digitaloceanspaces.com/data-viz/visuals/b1d6f608.png" alt="Daily Rolling Production by Grade">
+            </div>
+            
+            <div class="chart-container">
+                <h2>⚖️ Production vs Dispatch Analysis</h2>
+                <img src="https://external-agents.nyc3.digitaloceanspaces.com/data-viz/visuals/944e2f67.png" alt="Production vs Dispatch Overview">
+            </div>
+            
+            <div class="grid-2">
+                <div class="chart-container">
+                    <h2>🚚 Dispatch by Client</h2>
+                    <img src="https://external-agents.nyc3.digitaloceanspaces.com/data-viz/visuals/549f829b.png" alt="Dispatch Distribution">
+                </div>
+                
+                <div class="chart-container">
+                    <h2>💰 Payments Received</h2>
+                    <img src="https://external-agents.nyc3.digitaloceanspaces.com/data-viz/visuals/644db565.png" alt="Payments by Client">
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h2>📋 Purchase Order Fulfillment</h2>
+                <img src="https://external-agents.nyc3.digitaloceanspaces.com/data-viz/visuals/ebf9ca7c.png" alt="PO Fulfillment Status">
+            </div>
+            
+            <div class="chart-container">
+                <h2>💵 Financial Summary</h2>
+                <img src="https://external-agents.nyc3.digitaloceanspaces.com/data-viz/visuals/ff124694.png" alt="Financial Overview">
+            </div>
+            
+            <div class="chart-container">
+                <h2>📈 Key Performance Indicators</h2>
+                <img src="https://external-agents.nyc3.digitaloceanspaces.com/tables/906f8a10.png" alt="KPI Table">
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Generated by Bhindi Dashboard System | Report Date: 09-Dec-2025</p>
+        </div>
+    </div>
+</body>
+</html>
